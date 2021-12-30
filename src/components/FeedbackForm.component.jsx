@@ -3,8 +3,11 @@ import { useState } from 'react/cjs/react.development'
 import Card from './shared/Card.component'
 import Button from './shared/Button.component'
 
+import RatingSelect from './RatingSelect.component'
+
 const FeedbackForm = () => {
   const [text, setText] = useState('')
+  const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
 
@@ -27,7 +30,7 @@ const FeedbackForm = () => {
     <Card>
       <form>
         <h2>How would you rate your service with us?</h2>
-        {/* @todo - rating select component */}
+        <RatingSelect select={(rating) => setRating(rating)} />
         <div className='input-group'>
           <input
             onChange={handleTextChange}
