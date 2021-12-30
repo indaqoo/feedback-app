@@ -1,10 +1,18 @@
+import PropTypes from 'prop-types'
+
+import Card from './shared/Card.component'
+
 const FeedbackItem = ({ item }) => {
   return (
-    <div className='card'>
+    <Card>
       <div className='num-display'>{item.rating}</div>
       <div className='text-display'>{item.text}</div>
-    </div>
+    </Card>
   )
+}
+
+FeedbackItem.prototype = {
+  item: PropTypes.object.isRequired,
 }
 
 export default FeedbackItem
