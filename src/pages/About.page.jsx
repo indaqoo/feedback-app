@@ -1,7 +1,6 @@
 import Card from '../components/shared/Card.component'
 
 import { useNavigate } from 'react-router-dom'
-import Button from '../components/shared/Button.component'
 
 const About = () => {
   const navigate = useNavigate()
