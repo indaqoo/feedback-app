@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react/cjs/react.development'
+import { useState, useContext, useEffect } from 'react'
 
 import Card from './shared/Card.component'
 import Button from './shared/Button.component'
